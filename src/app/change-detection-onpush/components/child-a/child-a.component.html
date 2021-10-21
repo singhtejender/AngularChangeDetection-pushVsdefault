@@ -1,0 +1,20 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile colspan="2">
+    <div>
+      <p>Child A component OnPush</p>
+      <button class="mat-button" (click)="doAction()">Trigger Event</button>
+      <button class="mat-button" (click)="makeRequest()">
+        Trigger HTTP Event
+      </button>
+      <p>
+        Change Detection triggered: <strong>{{ times }}</strong>
+      </p>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-child-a1></app-child-a1>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-child-a2></app-child-a2>
+  </mat-grid-tile>
+</mat-grid-list>
